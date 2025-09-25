@@ -1,8 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📬 Next.js Mystery Message App
+
+A Next.js-based web application that allows users to send and receive mystery messages. Built using modern web technologies with support for real-time features, user-friendly UI, and secure message handling.
+
+---
+
+## Table of Contents
+
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+   - [Running Locally](#running-locally)
+4. [Usage](#usage)
+5. [Configuration & Environment Variables](#configuration--environment-variables)
+6. [Folder Structure](#folder-structure)
+7. [Scripts](#scripts)
+8. [Deployment](#deployment)
+9. [Contributing](#contributing)
+10. [License](#license)
+11. [Contact](#contact)
+
+---
+
+## Features
+
+- Send anonymous / semi-anonymous mystery messages
+- View or respond to received messages
+- Real-time or near real-time updates
+- Authentication & user management
+- Responsive UI for mobile & desktop
+- Secure message handling & storage
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js (TypeScript)
+- **Styling:** Tailwind CSS
+- **API / Backend:** Next.js API Routes
+- **Database / Storage:** (e.g. MongoDB / PostgreSQL / Firebase)
+- **Real-time / Messaging:** (e.g. WebSockets / Pusher)
+- **Deployment Target:** Vercel
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- **Node.js** — version 16.x or higher
+- **npm / yarn / pnpm** — package manager
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/peeyushzx55/Next.js-Mystery-Message-App.git
+cd Next.js-Mystery-Message-App
+```
+
+Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+### Running Locally
+
+Start the development server:
 
 ```bash
 npm run dev
@@ -10,27 +81,103 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and navigate to: `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
 
-## Learn More
+1. Register / login (if authentication is enabled).
+2. Compose your mystery message — choose recipient or leave anonymous.
+3. Send the message.
+4. Recipients can view and optionally respond.
+5. Messages appear in your dashboard / inbox.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Configuration & Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create a `.env.local` file in the project root and provide necessary environment variables such as:
 
-## Deploy on Vercel
+```text
+NEXT_PUBLIC_API_URL=…
+DATABASE_URL=…
+JWT_SECRET=…
+PUSHER_KEY=…
+PUSHER_SECRET=…
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Folder Structure
+
+```
+/
+├── emails/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/ or app/
+│   ├── styles/
+│   └── ...
+├── .vscode/
+├── next.config.ts
+├── tsconfig.json
+├── package.json
+├── README.md
+└── …
+```
+
+---
+
+## Scripts
+
+| Script   | Description                  |
+| -------- | ---------------------------- |
+| `dev`    | Start the development server |
+| `build`  | Build production version     |
+| `start`  | Run the production build     |
+| `lint`   | Run linter                   |
+| `format` | Auto-format code             |
+
+---
+
+## Deployment
+
+You can deploy this app to **Vercel** (recommended for Next.js).
+
+1. Connect repository to Vercel.
+2. Set up environment variables in the deployment UI.
+3. Choose the build & output settings (Next.js defaults usually work).
+4. Deploy.
+
+For more info, see [Next.js deployment docs](https://nextjs.org/docs/deployment).
+
+---
+
+## Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/YourFeature`
+3. Make your changes & commit: `git commit -m "Add X"`
+4. Push to your branch: `git push origin feature/YourFeature`
+5. Open a Pull Request
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## Contact
+
+**Peeyush Kumar**  
+GitHub: [peeyushzx55](https://github.com/peeyushzx55)
+
+---
